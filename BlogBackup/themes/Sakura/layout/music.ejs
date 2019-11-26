@@ -1,0 +1,70 @@
+<div class="pattern-center-blank">
+</div>
+<div class="pattern-center ">
+  <div class="pattern-attachment-img">
+    <img src="<%= page.photos %>" src="<%- theme.lazyloadImg %>" data-src="<%= page.photos %>" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+  </div>
+  <header class="pattern-header ">
+    <h1 class="entry-title">
+    音乐</h1>
+  </header>
+</div>
+<div id="content" class="site-content">
+  <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
+    
+    <p>
+      僕らは命に嫌われている。<br>
+      軽々しく死にたいだとか<br>
+      軽々しく命を見てる僕らは命に嫌われている。<br>
+      お金がないので今日も一日中惰眠を謳歌する<br>
+    生きる意味なんて見出せず、無駄を自覚して息をする。</p>
+    
+    <meting-js
+      server="netease"
+      type="song"
+      id="529659114"
+      mutex="true">
+    </meting-js>
+        
+    <% if (page.links) { %>
+      <div class="links">
+        <% (page.links||[]).forEach(function (group, index) { %>
+          <h3 class="link-title"><span class="fake-title"><%- index + 1 %>. <%- group.group %></span></h3>
+          <% if (group.desc) { %>
+            <div class="link-description"><%- group.desc %></div>
+          <% } %>
+          <ul class="link-items fontSmooth">
+            <% (group.items||[]).forEach(function (item) { %>
+              <li class="link-item">
+                <a class="link-item-inner effect-apollo" href="<%- item.url %>" title="<%- item.desc %>" target="_blank" rel="friend">
+                  <img class="lazyload" onerror="imgError(this,1)" src="<%- theme.lazyloadImg%>" data-src="<%- item.img %>" src="<%- item.img %>">
+                  <span class="sitename">
+                  <%- item.name %></span>
+                  <div class="linkdes">
+                  <%- item.desc %></div>
+                </a>
+              </li>
+            <% }) %>
+          </ul>
+        <% }) %>
+      </div>
+    <% } %>
+    <%- partial('_partial/comment', {post: page})  %>
+    <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+    
+  </article>
+  <section class="author-profile">
+    <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <a href="/about/" class="profile gravatar"><img src="<%- (theme.cdn || '') + theme.avatar%>" itemprop="image" alt="hojun" height="70" width="70"></a>
+      <div class="meta">
+        <span class="title">Author</span>
+        <h3 itemprop="name">
+        <a href="<%- theme.url%>" itemprop="url" rel="author"><%- config.author %></a>
+        </h3>
+      </div>
+    </div>
+    <hr>
+    <p><i class="iconfont icon-write"></i><%- theme.description%></p>
+  </section>
+
+</div>
