@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Mashiro
+title: ねこ・しろ・ましろ
 subtitle:
 description: Hi Mashiro
 keywords:
@@ -81,8 +81,8 @@ deploy:
   type: git
   repo: 
     # github: git@github.com:MashiroRb/MashiroRb.github.io.git
-    # github: https://github.com/MashiroRb/MashiroRb.github.io
-    coding: https://github.com/MashiroRb/MashiroRb.github.io
+    github: https://github.com/MashiroRb/MashiroRb.github.io
+    coding: git@e.coding.net:mashirox/mashiroxxx/HelloHexo.git
   branch: master
 
 # backup
@@ -107,20 +107,22 @@ feed:
 live2d:
   enable: true
   scriptFrom: local
-  pluginRootPath: live2dw/
-  pluginJsPath: lib/
-  pluginModelPath: assets/
+  pluginRootPath: live2d/
+  pluginJsPath: assets/js/
+  pluginModelPath: assets/model/
   tagMode: false
   log: false
   model:
-    use: live2d-widget-model-shizuku
+    use: live2d-widget-model-mashiro
   display:
-    position: left
-    width: 150
-    height: 300
-    hOffset: 10
-    vOffset: 30
+    position: right
+    width: 170
+    height: 340
+    hOffset: 70
+    vOffset:
+
     mobile:
-      show: true
+      show: false
+      scale: 0
     react:
       opacity: 1.0

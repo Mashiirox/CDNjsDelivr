@@ -4,7 +4,7 @@ date: 2019-11-22 23:22:46
 keywords: 关于
 description: 
 comments: false
-photos: https://cdn.jsdelivr.net/gh/MashiroRb/CDNjsDelivr@v1.8/img/banner/miku.jpg
+photos: https://cdn.jsdelivr.net/gh/MashiroRb/CDNjsDelivr@v2.0/imgAnother/a18.jpg
 ---
 {% raw %}
 <!-- 因为vue和botui更新导至bug,现将对话移至js下的botui中配置 -->

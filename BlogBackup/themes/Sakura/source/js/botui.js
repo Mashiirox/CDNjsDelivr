@@ -54,7 +54,7 @@ function bot_ui_ini() {
                         content: "主攻 Python，略懂 Java，精通 C/C++/C#/JavaScript/PHP"
                     }).then(function () {
                         botui.message.add({
-                            delay: 1200,
+                            delay: 2000,
                             content: "的 \"Hello World\" 输出方式 "
                         }).then(function () {
                                     botui.action.button({
